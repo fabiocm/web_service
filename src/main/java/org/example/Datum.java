@@ -8,7 +8,7 @@ import lombok.*;
 @Getter
 @Setter
 
-public class User {
+public class Datum {
 
     private int id;
     private String email;

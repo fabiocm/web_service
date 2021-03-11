@@ -1,16 +1,14 @@
 package org.example;
 
 import retrofit2.Call;
-import retrofit2.http.Body;
-import retrofit2.http.GET;
-import retrofit2.http.POST;
+import retrofit2.http.*;
 
 import java.util.List;
 
 public interface UserService {
-    @GET("posts")
-    Call<List<User>> listUsers();
+    @GET("/users")
+    Call<Root> listUsers(@Query("page")int page);
 
-    @POST("posts")
-    Call<User> savePost(@Body User post);
+    @POST("/")
+    Call<Datum> createUser(@Body Datum post);
 }
